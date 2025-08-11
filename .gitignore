@@ -1,0 +1,106 @@
+# --- Arquivos de IDE/Sistema ---
+*.iml
+.gradle
+.DS_Store
+*.swp
+*.swo
+*.log
+*.log.*
+*.bak
+*.tmp
+*.orig
+*~
+
+# --- Android Studio ---
+/.idea/
+!.idea/codeStyles/
+!.idea/copyright/
+/local.properties
+/captures/
+/build/
+/output.json
+
+# --- Build/Compilação ---
+*.apk
+*.aab
+*.aar
+*.ap_
+*.dex
+*.class
+**/bin/
+**/gen/
+**/out/
+**/build/
+**/production/
+**/.externalNativeBuild/
+**/.cxx/
+**/release/
+**/debug/
+
+# --- Gradle ---
+.gradle/
+**/gradle-app.setting
+**/gradle-wrapper.jar
+!gradle-wrapper.properties
+gradle.properties
+
+# --- Ambiente/Configurações ---
+**/local.properties
+**/local_env/
+**/env/
+**/.env
+**/*.env
+**/keystore/
+**/*.keystore
+**/*.jks
+**/*.cert
+**/*.pfx
+
+# --- Unity (caso tenha algo relacionado) ---
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# --- Outros ---
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+**/.metadata
+**/.recommenders
+**/__pycache__/
+**/*.pyc
+**/node_modules/
+**/jspm_packages/
+**/web_modules/
+**/.cache/
+**/.nx/
+**/.npm/
+**/.yarn/
+
+# Arquivos específicos do Android
+**/*.keystore
+**/*.jks
+google-services.json
+firebase-config.json
+
+# Gradle
+gradle/
+!gradle-wrapper.jar
+
+# Build
+build/
