@@ -4,7 +4,7 @@
 
 **Gamertag: silenciopz**  
 
-*(Porque até o Diablo teme um inventory organizado! 💀⚔️)*  
+*(Porque até o Diablo teme um inventário organizado! 💀⚔️)*  
 --------------------------------------------------------------------------------------------------------------------------------------
 🎮 FUNCIONALIDADES PRINCIPAIS
 
