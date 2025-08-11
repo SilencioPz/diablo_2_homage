@@ -1,10 +1,10 @@
-#🔥 DIABLIM DO SILÊNCIO - O APP DO SEU DIABLO 2 OFFLINE
+# 🔥 **DIABLIM DO SILÊNCIO**  
 
-Um aplicativo Android em Kotlin para gerenciar seus personagens, builds e itens do Diablo 2 como um verdadeiro Senhor da Destruição!
+### *O APP DEFINITIVO DO SEU DIABLO 2 OFFLINE*  
 
-Gamertag: silenciopz
+**Gamertag: silenciopz**  
 
-(Porque o Diablo teme um inventory organizado! 💀⚔️)
+*(Porque até o Diablo teme um inventory organizado! 💀⚔️)*  
 --------------------------------------------------------------------------------------------------------------------------------------
 🎮 FUNCIONALIDADES PRINCIPAIS
 
