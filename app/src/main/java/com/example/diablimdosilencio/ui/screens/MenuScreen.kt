@@ -53,14 +53,12 @@ fun MenuScreen(navController: NavHostController) {
                 textAlign = TextAlign.Center
             )
 
-            // Área da imagem com efeito de chamas intenso
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(150.dp)
                     .padding(horizontal = 16.dp)
             ) {
-                // Imagem das chamas com efeito de brilho
                 val infiniteTransition = rememberInfiniteTransition()
                 val glowIntensity by infiniteTransition.animateFloat(
                     initialValue = 0.8f,
@@ -78,7 +76,6 @@ fun MenuScreen(navController: NavHostController) {
                     contentScale = ContentScale.Crop,
                     colorFilter = ColorFilter.colorMatrix(
                         ColorMatrix().apply {
-                            // Aumenta drasticamente o brilho e saturação
                             setToScale(
                                 redScale = glowIntensity * 1.8f,
                                 greenScale = glowIntensity * 1.3f,
@@ -89,7 +86,6 @@ fun MenuScreen(navController: NavHostController) {
                     )
                 )
 
-                // Imagem do demônio por cima das chamas
                 Image(
                     painter = painterResource(id = R.drawable.diablim_do_paraguay),
                     contentDescription = "Diablim do Paraguay",
@@ -105,7 +101,6 @@ fun MenuScreen(navController: NavHostController) {
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                // Título
                 Text(
                     text = "DIABLIM DO SILÊNCIO",
                     fontSize = 24.sp,
@@ -114,7 +109,6 @@ fun MenuScreen(navController: NavHostController) {
                     modifier = Modifier.padding(bottom = 32.dp)
                 )
 
-                // Botões do menu
                 DiabloButton(
                     text = "PERSONAGENS",
                     onClick = { navController.navigate("personagens") }
@@ -156,7 +150,6 @@ fun MenuScreen(navController: NavHostController) {
                 )
             }
 
-            // RODAPÉ
             Text(
                 text = "Este é um projeto de fã para fãs brasileiros.",
                 color = Color.White,
@@ -203,7 +196,6 @@ private fun DrawScope.drawIntenseFlames(offset: Float, intensity: Float) {
     val width = size.width
     val height = size.height
 
-    // Cores das chamas ultra brilhantes
     val flameColors = listOf(
         Color(0xFFFFFFFF).copy(alpha = 0.9f * intensity), // Branco intenso
         Color(0xFFFFFF00).copy(alpha = 0.8f * intensity), // Amarelo brilhante
@@ -212,7 +204,6 @@ private fun DrawScope.drawIntenseFlames(offset: Float, intensity: Float) {
         Color(0xFFFF0000).copy(alpha = 0.7f * intensity), // Vermelho
     )
 
-    // Efeito de brilho de fundo
     drawRect(
         brush = Brush.radialGradient(
             colors = listOf(
@@ -223,13 +214,11 @@ private fun DrawScope.drawIntenseFlames(offset: Float, intensity: Float) {
         )
     )
 
-    // Desenha chamas nas bordas com mais intensidade
     val edgeFlameCount = 15
     for (i in 0..edgeFlameCount) {
         val progress = i.toFloat() / edgeFlameCount
         val yPos = height * progress
 
-        // Chama esquerda
         drawIntenseFlame(
             x = -20f,
             y = yPos,
@@ -240,7 +229,6 @@ private fun DrawScope.drawIntenseFlames(offset: Float, intensity: Float) {
             colors = flameColors
         )
 
-        // Chama direita
         drawIntenseFlame(
             x = width + 20f,
             y = yPos,
@@ -252,7 +240,6 @@ private fun DrawScope.drawIntenseFlames(offset: Float, intensity: Float) {
         )
     }
 
-    // Chamas na base (muito intensas)
     val baseFlameCount = 12
     for (i in 0..baseFlameCount) {
         val xPos = (width / baseFlameCount) * i
@@ -267,7 +254,6 @@ private fun DrawScope.drawIntenseFlames(offset: Float, intensity: Float) {
         )
     }
 
-    // Chamas no topo
     val topFlameCount = 8
     for (i in 0..topFlameCount) {
         val xPos = (width / topFlameCount) * i
@@ -295,12 +281,10 @@ private fun DrawScope.drawIntenseFlame(
     val animatedHeight = height * (0.6f + sin(offset * 3 * PI).toFloat() * 0.4f) * intensity
     val animatedWidth = width * (0.8f + cos(offset * 2 * PI).toFloat() * 0.2f)
 
-    // Seleciona cor baseada no offset
     val colorIndex = (offset * colors.size).toInt() % colors.size
     val primaryColor = colors[colorIndex]
     val secondaryColor = colors[(colorIndex + 1) % colors.size]
 
-    // Gradiente ultra brilhante
     val brush = Brush.radialGradient(
         colors = listOf(
             primaryColor.copy(alpha = primaryColor.alpha * intensity),
@@ -311,7 +295,6 @@ private fun DrawScope.drawIntenseFlame(
         radius = animatedWidth * 0.8f
     )
 
-    // Desenha múltiplas camadas para intensificar o brilho
     repeat(3) { layer ->
         val layerAlpha = (3 - layer) / 3f * intensity
         val layerSize = animatedWidth * (1f - layer * 0.15f)
